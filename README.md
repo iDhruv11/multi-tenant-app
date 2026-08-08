@@ -15,6 +15,10 @@ To solve these problems, the platform combines PostgreSQL Row Level Security (RL
 
 ---
 
+<p align="center">
+  <img src="assets/multi-tenant-screenshot.png" alt="Multi-Tenant Project Collaboration Platform UI" width="900">
+</p>
+
 # Goal
 
 This project explores a SaaS architecture where multiple organizations operate inside the same deployment and database while remaining completely isolated from one another.
@@ -32,13 +36,17 @@ The goal was to build something that demonstrates:
 
 # Architecture Overview
 
-The platform follows a shared-database multi-tenant architecture.Each company is represented as a tenant.A tenant owns:
+<p align="center">
+  <img src="assets/multi-tenant-architecture.png" alt="Multi-Tenant Project Collaboration Platform Architecture" width="900">
+</p>
 
-* Users
-* Projects
-* Tasks
-* Sessions
-* Activity logs
+The platform follows a shared-database multi-tenant architecture. Each company is represented as a tenant. A tenant owns:
+
+- Users
+- Projects
+- Tasks
+- Sessions
+- Activity logs
 
 All tenants share the same PostgreSQL database, but data isolation is enforced through multiple layers:
 
